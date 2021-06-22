@@ -24,5 +24,4 @@ export class CharactersComponent implements OnInit {
   getCharacters(){
     this.allCharacters = this.characterSvc.getAllCharacters();
   }
-
 }

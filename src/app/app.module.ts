@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
@@ -13,10 +13,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { CharacterComponent } from './characters/character/character.component';
-import { CharactersComponent } from './characters/characters.component';
+import { CharacterComponent } from './components/character/character.component';
+import { CharactersComponent } from './components/characters.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ComicsComponent } from './components/comics/comics.component';
+import { EventsComponent } from './components/events/events.component';
+import { SeriesComponent } from './components/series/series.component';
+import { StoriesComponent } from './components/stories/stories.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +28,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     NavbarComponent,
     CharacterComponent,
     CharactersComponent,
+    ComicsComponent,
+    EventsComponent,
+    SeriesComponent,
+    StoriesComponent,
   ],
   imports: [
     BrowserModule,

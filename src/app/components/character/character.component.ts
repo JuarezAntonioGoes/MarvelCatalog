@@ -1,8 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
-
-
-
 @Component({
   selector: 'app-character',
   templateUrl: './character.component.html',
@@ -17,8 +14,19 @@ export class CharacterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
   showComics(id:number){
-    this.route.navigate(['/details/',id]);
+    this.route.navigate(['/comics/', id]);
+  }
+  
+  showEvents(id:number){
+    this.route.navigate(['/events/', id]);
+    
+  }
+  showSeries(id:number){
+    this.route.navigate(['/series/', id]);
+    
+  }
+  showStories(id:number){
+    this.route.navigate(['/stories/', id]);
   }
 }
