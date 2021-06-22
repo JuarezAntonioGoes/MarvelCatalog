@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CharactersComponent } from './components/characters.component';
-import { Injectable } from '@angular/core';
+import { StoriesComponent } from './components/stories/stories.component';
+import { EventsComponent } from './components/events/events.component';
+import { ComicsComponent } from './components/comics/comics.component';
+import { SeriesComponent } from './components/series/series.component';
 
 
 const routes: Routes = [{
@@ -9,6 +12,22 @@ const routes: Routes = [{
 },
 {
   path:'characters',component: CharactersComponent
+},
+{
+  path: 'comics/:id',
+  component: ComicsComponent
+},
+{
+  path: 'events/:id',
+  component: EventsComponent
+},
+{
+  path: 'series/:id',
+  component: SeriesComponent
+},
+{
+  path: 'stories/:id',
+  component: StoriesComponent
 }
 ];
 

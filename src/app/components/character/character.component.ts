@@ -14,19 +14,19 @@ export class CharacterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  showComics(id:number){
+  getComics(id:number){
     this.route.navigate(['/comics/', id]);
   }
   
-  showEvents(id:number){
+  getEvents(id:number){
     this.route.navigate(['/events/', id]);
     
   }
-  showSeries(id:number){
+  getSeries(id:number){
     this.route.navigate(['/series/', id]);
     
   }
-  showStories(id:number){
+  getStories(id:number){
     this.route.navigate(['/stories/', id]);
   }
 }
