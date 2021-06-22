@@ -2,6 +2,11 @@
     <img src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}" alt="{{character.name}}" class="mat-card-image">
     <mat-card-title>{{character.name}}</mat-card-title>
     <mat-card-footer>
-        <a (click)="showComics(character.id)" target="_blank" fxFlex mat-flat-button color="primary" > <mat-icon>library_books</mat-icon> Detalhes</a>
+        <mat-list>
+            <mat-list-item><a (click)="showComics(character.id)" target="_blank" fxFlex mat-flat-button color="primary" > <mat-icon>label_important</mat-icon>Histórias</a></mat-list-item>
+            <mat-list-item><a (click)="showComics(character.id)" target="_blank" fxFlex mat-flat-button color="primary" > <mat-icon>event_note</mat-icon>Eventos</a></mat-list-item>
+            <mat-list-item><a (click)="showComics(character.id)" target="_blank" fxFlex mat-flat-button color="primary" > <mat-icon>live_tv</mat-icon>Séries</a></mat-list-item>
+            <mat-list-item><a (click)="showComics(character.id)" target="_blank" fxFlex mat-flat-button color="primary" > <mat-icon>library_books</mat-icon>Quadrinhos</a></mat-list-item>
+           </mat-list>
     </mat-card-footer>
 </mat-card>
