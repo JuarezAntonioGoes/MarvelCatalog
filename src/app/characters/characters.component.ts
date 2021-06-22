@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CharactersApiService } from './character/shared/characters-api.service';
+import { Router } from '@angular/router';
+import { MarvelApiService } from './character/shared/marvel-api.service';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -9,13 +10,17 @@ import { Observable } from 'rxjs';
 })
 export class CharactersComponent implements OnInit {
 
-  constructor(private characterSvc: CharactersApiService) { }
+  constructor(
+    private characterSvc: MarvelApiService,
+    private route: Router,
+  ) { }
 
   allCharacters: Observable<any>;
   
   ngOnInit(): void {
     this.getCharacters();
   }
+
   getCharacters(){
     this.allCharacters = this.characterSvc.getAllCharacters();
   }
