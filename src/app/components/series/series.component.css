@@ -1,0 +1,7 @@
+img.mat-card-image{
+    min-height: 400px;
+    max-height: 400px;
+}
+.cardsCharacters{
+    padding: 10px;
+}

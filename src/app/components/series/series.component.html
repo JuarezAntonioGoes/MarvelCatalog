@@ -1,1 +1,26 @@
-<p>series works!</p>
+<div fxFlex fxLayout="column">
+    <div fxLayout="row wrap">
+        <div 
+            fxFlex="25"
+            fxFlex.md= "33"
+            fxFlex.sm="50"
+            fxFlex.xs="100"
+            flxLayout="column"
+            *ngFor="let character of characters"
+            class="cardsCharacters">
+            <mat-card>
+                <img
+                  src="{{ character.thumbnail.path }}.{{ character.thumbnail.extension }}"
+                  alt="{{ character.name }}"
+                  class="mat-card-image"
+                />
+                <mat-card-title>{{ character.title }}</mat-card-title>
+               <mat-card-content>
+                    <p>
+                       {{ character.description}}
+                    </p>
+               </mat-card-content>
+            </mat-card>    
+        </div>
+    </div>
+</div>
