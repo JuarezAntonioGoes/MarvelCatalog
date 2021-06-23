@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./character.component.css']
 })
 export class CharacterComponent implements OnInit {
+  public optionsVisible: boolean = false;
 
   @Input() character: any;
   constructor(
@@ -28,5 +29,13 @@ export class CharacterComponent implements OnInit {
   }
   getStories(id:number){
     this.route.navigate(['/stories/', id]);
+  }
+
+  aparecerOptions(){
+    this.optionsVisible = true;
+  }
+
+  esconderOptions(){
+    this.optionsVisible = false;
   }
 }

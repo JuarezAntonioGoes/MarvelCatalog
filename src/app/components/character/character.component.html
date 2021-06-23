@@ -1,62 +1,31 @@
-<mat-card>
-  <img
-    src="{{ character.thumbnail.path }}.{{ character.thumbnail.extension }}"
-    alt="{{ character.name }}"
-    class="mat-card-image"
-  />
-  <mat-card-title>{{ character.name }}</mat-card-title>
-  <mat-card-footer>
-    <mat-list>
-      <mat-list-item>
-        <a
-          (click)="getComics(character.id)"
-          target="_blank"
-          fxFlex
-          mat-flat-button
-          color="primary"
-        >
-        <mat-icon>library_books</mat-icon>Quadrinhos</a
+<mat-card class="card-container" (mouseenter)="aparecerOptions()" (mouseout)="esconderOptions()">
 
-        ></mat-list-item
-      >
-      <mat-list-item
-        ><a
-          (click)="getSeries(character.id)"
-          target="_blank"
-          fxFlex
-          mat-flat-button
-          color="primary"
-        >
+    <img src="{{ character.thumbnail.path }}.{{ character.thumbnail.extension }}" alt="{{ character.name }}" class="mat-card-image" />
 
-        <mat-icon>live_tv</mat-icon>Séries</a
+    <mat-card-title>{{ character.name }}</mat-card-title>
 
-        ></mat-list-item
-      >
-      <mat-list-item
-        ><a
-          (click)="getStories(character.id)"
-          target="_blank"
-          fxFlex
-          mat-flat-button
-          color="primary"
-        >
-        <mat-icon>label_important</mat-icon>Histórias</a
+    <mat-card-footer class="footer-card" *ngIf="optionsVisible === true">
 
+        <mat-list>
+            <mat-list-item>
+                <a (click)="getComics(character.id)" target="_blank" fxFlex mat-flat-button color="primary">
+                    <mat-icon>library_books</mat-icon>Quadrinhos</a>
+            </mat-list-item>
+            <mat-list-item>
+                <a (click)="getSeries(character.id)" target="_blank" fxFlex mat-flat-button color="primary">
 
-        ></mat-list-item
-      >
-      <mat-list-item
-        ><a
-          (click)="getEvents(character.id)"
-          target="_blank"
-          fxFlex
-          mat-flat-button
-          color="primary">
-          <mat-icon>event_note</mat-icon>Eventos</a
+                    <mat-icon>live_tv</mat-icon>Séries</a>
+            </mat-list-item>
+            <mat-list-item>
+                <a (click)="getStories(character.id)" target="_blank" fxFlex mat-flat-button color="primary">
+                    <mat-icon>label_important</mat-icon>Histórias</a>
+            </mat-list-item>
+            <mat-list-item>
+                <a (click)="getEvents(character.id)" target="_blank" fxFlex mat-flat-button color="primary">
+                    <mat-icon>event_note</mat-icon>Eventos</a>
+            </mat-list-item>
+        </mat-list>
 
-        
-        ></mat-list-item
-      >
-    </mat-list>
-  </mat-card-footer>
+    </mat-card-footer>
+
 </mat-card>
