@@ -6,8 +6,8 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class MarvelApiService {
-  PUBLIC_KEY='f819f3621f81dde7edc382743d93d41c';
-  HASH='968c51ae154e70c54a0d0dd4fb5f405d';
+  PUBLIC_KEY='1356ed09740d545b0cd9966028d92d01';
+  HASH='d4d255c2452317efba8f0ac2204be45f';
   TS='16185334990410';
   URL_API=`https://gateway.marvel.com/v1/public/`
   CREDENTIALS=`?ts=${this.TS}&apikey=${this.PUBLIC_KEY}&hash=${this.HASH}`;
