@@ -1,10 +1,10 @@
-<mat-card class="card-container" (mouseenter)="aparecerOptions()" (mouseout)="esconderOptions()">
+<mat-card class="card-container">
 
     <img src="{{ character.thumbnail.path }}.{{ character.thumbnail.extension }}" alt="{{ character.name }}" class="mat-card-image" />
 
     <mat-card-title>{{ character.name }}</mat-card-title>
 
-    <mat-card-footer class="footer-card" *ngIf="optionsVisible === true">
+    <mat-card-footer class="footer-card">
 
         <mat-list>
             <mat-list-item>

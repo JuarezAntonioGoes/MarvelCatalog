@@ -31,11 +31,7 @@ export class CharacterComponent implements OnInit {
     this.route.navigate(['/stories/', id]);
   }
 
-  aparecerOptions(){
-    this.optionsVisible = true;
-  }
+ 
 
-  esconderOptions(){
-    this.optionsVisible = false;
-  }
+  
 }
